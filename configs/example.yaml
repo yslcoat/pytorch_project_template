@@ -1,0 +1,21 @@
+experiment: example
+output: output
+
+model: simple_cnn
+num_classes: 10
+in_chans: 3
+
+dataset: synthetic
+img_size: 32
+batch_size: 64
+workers: 2
+
+opt: adamw
+lr: 1.0e-3
+weight_decay: 0.05
+epochs: 3
+sched: cosine
+warmup_epochs: 1
+
+amp: true
+amp_dtype: bfloat16
